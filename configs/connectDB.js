@@ -12,7 +12,7 @@ const conn_options = {
 const connectedDB = () => {
   mongoose.set("debug", true);
   mongoose
-    .connect(mongoURL, conn_options)
+    .connect(atlasURL || mongoURL, conn_options)
     .then(() => {
       console.log(`Conected to database ${mongoURL}`);
     })
