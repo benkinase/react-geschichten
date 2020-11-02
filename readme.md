@@ -1,4 +1,4 @@
-# StoryBooks
+# Geschichten (stories)
 
 > Create public and private stories.
 
