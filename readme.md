@@ -1,12 +1,8 @@
 # StoryBooks
 
-> Create public and private stories from your life
+> Create public and private stories.
 
-This app uses Node.js/Express/MongoDB with Google OAuth for authentication
-
-## Usage
-
-Add your mongoDB URI and Google OAuth credentials to the config.env file
+This app uses Node.js/Express/MongoDB/Cloudinary with jwt for authentication
 
 ```
 # Install dependencies
