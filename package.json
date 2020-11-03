@@ -1,9 +1,12 @@
 {
-  "name": "story-lane",
+  "name": "geschichten",
   "version": "1.0.0",
   "description": "App for creating public and private stories",
   "main": "app.js",
   "scripts": {
+    "build": "cd client && npm run build",
+    "install-client": " cd client npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
     "start": "node server",
     "server": "nodemon server",
     "client": "npm start --prefix client",
