@@ -7,9 +7,6 @@ const userRoute = require("./routes/user.routes");
 const storiesRoute = require("./routes/stories.routes");
 const { port, environment } = require("./configs/secrets");
 
-const dotenv = require("dotenv");
-dotenv.config();
-
 // express instatnce
 const app = express();
 
@@ -32,10 +29,11 @@ app.use("/api/user", userRoute);
 
 // // Handle SPA
 if (environment == "production") {
-  app.use(express.static("client/build"));
+  console.log(environment);
+  app.use(express.static("public/build"));
   const path = require("path");
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "public", "build", "index.html"));
   });
 }
 
